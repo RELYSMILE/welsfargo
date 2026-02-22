@@ -9,9 +9,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['logo_192x192.png', 'logo_512x512.png', 'logo.png'],
       manifest: {
-        name: 'hyperfortel',
-        short_name: 'hyperfortel',
-        description: 'Hyperforte | Customized Solutions for Seamless Operations',
+        name: 'wellsfargo',
+        short_name: 'wellsfargo',
+        description: 'wellsfargo | Customized Solutions for Seamless Operations',
         theme_color: '#ffffff',
         background_color: '#ffffff',
         display: 'standalone',
