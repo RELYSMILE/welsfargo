@@ -11,17 +11,8 @@
         .footer-logo-container{
             width: 32%;
             .logo-container{
-                display: flex;
-                align-items: center;
-                gap: .3rem;
                 .logo{
-                    border-radius: 100%;     
-                    padding: .4rem;
-                    width: 3.2rem;
-                    height: 3.2rem;
-                }
-                .logo_alpha{
-                    width: 8.2rem;
+                    width: 8rem;
                 }
             }
             .info{
@@ -52,7 +43,7 @@
         .qiuck-links{
             .lable{
                 position: relative;
-                color: tomato;
+                color: #e87f6b;
                 font-size: 1.2rem;
                 font-weight: 700;
                 margin-bottom: 1rem;
@@ -86,14 +77,41 @@
 
                 a{
                     color: #c2c2c2;
+                    font-size: .9rem;
+
+                    &:hover{
+                        color: #fff;
+                        transition: .5s;
+                    }
                 }
 
                 img{
                     width: 1rem;
                     height: 1rem;
                 }
+                .qr-container{
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                    }
+                    .qr{
+                        height: 8rem;
+                        width: 8rem;
+                    }
+                }
+                
                 .location{
                     color: #c2c2c2;
+                    cursor: pointer;
+                    &:hover{
+                        color: #fff;
+                        transition: .5s;
+                    }
                 }
             }
         }

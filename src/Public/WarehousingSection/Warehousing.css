@@ -1,0 +1,89 @@
+.warehousing{
+    background: linear-gradient(135deg, #0f2027, #350849, #1a2225, #013a6b, #0a1c2c);
+
+    .main-container-fluid{
+        .parent-right-side-container{
+            .ocean-images{
+                img{
+                    height: 23rem;
+                }
+            }
+            .storage-services-main-container{
+                display: flex;
+                flex-direction: column;
+
+                .heading{
+                    color: #284650;
+                    font-family: Arial;
+                    font-weight: 900;
+                    font-size: 1.5rem;
+                    margin-top: 2.5rem;
+                }
+                .storage-services-container{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 1rem;
+
+                    .storage-services{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+
+                        .services{
+                            display: flex;
+                            align-items: start;
+                            justify-content: left;
+                            gap: 1rem;
+
+                            .bullet{
+                                width: .6rem;
+                                height: .8rem;
+                                border: 1px solid #e97e6a;
+                            }
+                            .service{
+                                font-family: 'Gotham';
+                                color: #808080;
+                                font-size: 16px;
+                                line-height: 1.6;
+
+                                &:hover{
+                                    color: #e97e6a;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .warehousing{
+        .main-container-fluid{
+            .parent-right-side-container{
+                .storage-services-main-container{
+                    .storage-services-container{
+                        gap: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 520px){
+    .warehousing{
+        .main-container-fluid{
+            .parent-right-side-container{
+                .storage-services-main-container{
+                    .storage-services-container{
+                        flex-direction: column;
+                        align-items: start;
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

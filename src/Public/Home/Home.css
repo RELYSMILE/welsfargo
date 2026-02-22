@@ -125,7 +125,7 @@
                 justify-content: center;
                 position: absolute;
                 top: 0;
-                left: 50%;
+                left: 47%;
                 height: 20rem;
                 width: .3rem;
                 background: #808080;
@@ -162,7 +162,7 @@
                             margin-top: 1.2rem;
 
                             &:hover{
-                                color: tomato;
+                                color: #e97e6a;
                                 cursor: pointer;
                             }
                         }
@@ -175,19 +175,18 @@
                         }
                         .action-button{
                             position: absolute;
-                            top: 13rem;
+                            top: 10rem;
                             border: 1px solid tomato;
                             background: transparent;
                             color: tomato;
                             padding: .3rem .8rem;
-                            color: tomato;
                             border-radius: .2rem;
                             font-family: 'Gotham';
                             cursor: pointer;
                             transition: .5s;
 
                             &:hover{
-                                background: tomato;
+                                background: #e97e6a;
                                 transition: .5s;
                                 color: #fff;
                             }
@@ -246,7 +245,7 @@
                             .bullet{
                                 width: .5rem;
                                 height: .5rem;
-                                background: tomato;
+                                background: #e97e6a;
                             }
                             .list-text{
                                 color: #dadada;
@@ -499,10 +498,9 @@
             bottom: 6rem;
             cursor: pointer;
             width: fit-content;
-            background: tomato;
+            background: #e97e6a;
             padding: .5rem;
             border-radius: 100%;
-            z-index: 1;
 
             img{
                 animation: bounce .8s ease-in-out infinite;
@@ -517,7 +515,6 @@
             background-color: tomato;
             padding: .5rem;
             color: #fff;
-            z-index: 1;
             font-family: 'Gotham';
         }
     }
@@ -532,7 +529,7 @@
         align-items: center;
         justify-content: center;
         background: #fff;
-        z-index: 1;
+        z-index: 111;
     }
 }
 
@@ -1298,12 +1295,20 @@
             }
             }
             .content-fluid-container-3{
-            .steps-container{
-                flex-direction: column;
-                text-align: center;
-                gap: 2rem;
-                padding: 3rem;
-            }
+                .steps-container{
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 2rem;
+                    padding: 0;
+
+                    .step{
+                        width: 100%;
+                    }
+
+                    .line{
+                        display: none;
+                    }
+                }
             }
             .content-fluid-container-4{
             padding: 4rem 4%;

@@ -1,0 +1,83 @@
+.road-transport{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #09203f, #537895);
+
+    .main-container-fluid{
+        .parent-right-side-container{
+            .road_freight_images{
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 2rem;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                }
+
+                img{
+                    height: 8rem;
+                    border-radius: .8rem;
+                }
+            }
+
+            .shipping-options-container{
+                .shipping-options{
+                    .info{
+                        margin-top: .5rem;
+                    }
+                    .options{
+                        margin-left: 0;
+
+                        button{
+                            border: none;
+                            outline: none;
+                            background: #e97e6a;
+                            width: fit-content;
+                            margin-top: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1185px){
+    .road-transport{
+        .main-container-fluid{
+            .parent-right-side-container{
+                .road_freight_images{
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2rem;
+
+                    img{
+                        height: 8rem;
+                        border-radius: .8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 554px){
+    .road-transport{
+        .main-container-fluid{
+            .parent-right-side-container{
+                .road_freight_images{
+                    img{
+                        height: auto;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

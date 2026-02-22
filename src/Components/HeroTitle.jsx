@@ -14,7 +14,7 @@ const HeroTitle = () => {
     },
     {
       id: 1,
-      tag: 'Full Service Warehousing & Fulfillment',
+      tag: 'Logistics & Transportation',
       title_1: 'Our company offers Logistics Services',
     },
     {
@@ -53,9 +53,9 @@ const HeroTitle = () => {
             <div className='animation-tag'>{quoteDataSet[index].tag}</div>
             <h1 className='animation-title_1'>{quoteDataSet[index].title_1}</h1>
             <div className='animation-info'>We offer you a one-of-a-kind outsourcing support for hiring, freights, logistics and exports.</div>
-            <Link to='https://wa.me/2349021463046' target='_blank'>
+            <Link to={'/shipment-tracking-pilot'}>
               <div className='tack-button-container'>
-                  <div>Request a FREE Quote</div>
+                  <div>Track</div>
                   <img src={arrow_forward} alt="" />
               </div>
             </Link>

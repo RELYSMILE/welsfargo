@@ -1,0 +1,22 @@
+.multimodal{
+    background: linear-gradient(135deg, #0f2027, #49083e, #1a2225, #013a6b, #0a1c2c);
+
+    .main-container-fluid{
+        .parent-right-side-container{
+            .multimodal-solutions{
+                margin-bottom: 4rem;
+                .heading{
+                    color: #284650;
+                    font-family: Arial;
+                    font-weight: 900;
+                    font-size: 1.5rem;
+                    margin-top: 2.5rem;
+                }
+                .info{
+                    margin-top: 1rem;
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+}

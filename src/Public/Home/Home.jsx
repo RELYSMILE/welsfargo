@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Footer from '../../Components/Footer/Footer.jsx'
+import { AppContext } from '../../Context/Context.jsx';
 import { Link } from 'react-router-dom';
 import LiveChat from '../../Components/LiveChat/LiveChat.jsx';
 import AOS from "aos";
@@ -31,6 +32,7 @@ import tab_0 from '../../assets/bg/tab-0.png'
 import './Home.css'
 
 const Home = () => {
+  const {settings} = useContext(AppContext)
   const [isNavBgVisible, setIsNavBgVisible] = useState(false)
   const [isPageLoading, setIsPageLoading] = useState(false)
   const [homeId, setHomeId] = useState('home')
@@ -40,31 +42,31 @@ const Home = () => {
   const cards = [
     {
       id: 1, 
-      heading: 'Rentals & Hires',
-      text: 'Order ready-to-go vehicles  for personal or company occasions and  seasoned drivers.',
+      heading: 'Air Freight',
+      text: 'Our air freight network offers the fastest and most convenient connections.',
       icon: icon01dark, 
-      alt: 'Rentals & Hires'
+      alt: 'Air Freight'
     },
     {
       id: 2, 
-      heading: 'Transportation & Haulage',
-      text: 'Move your goods and services to any destination home and abroad.',
+      heading: 'Road Transport',
+      text: 'We provide Local, International & GCC Land Cargo Transport & Freight Forwarding Options.',
       icon: icon02dark, 
-      alt: 'Transportation & Haulage'
+      alt: 'Road Transport'
     },
     {
       id: 3, 
-      heading: 'Services Technology Tools',
-      text: 'Automate your services through technology innovations and tools that simplify work and satisfy customers.',
+      heading: 'Ocean Freight',
+      text: 'We are a globally well-known ocean freight forwarder with offices across 42 countries.',
       icon: icon03dark, 
-      alt: 'Services Technology Tools'
+      alt: 'Ocean Freight'
     },
     {
       id: 4, 
-      heading: 'Warehousing',
-      text: 'We provide secure and efficient warehousing solutions for goods of all sizes, ensuring safe storage, easy accessibility, and timely distribution.',
+      heading: 'Rail Freight',
+      text: 'To deliver goods of any kind and size, use sustainable rail transport with a clear departure and arrival plan.',
       icon: icon04dark, 
-      alt: 'Warehousing'
+      alt: 'Rail Freight'
     },
   ]
   
@@ -125,8 +127,8 @@ const Home = () => {
 
             <div className='content-fluid-text'>
               <div className='heading'>World's Leading Contract Logistics Provider</div>
-              <div data-aos="zoom-in" className='text-para-1'>We offers freight forwarding, contract logistics, Rentals & Hires, Transportation & Haulage and Services Technology Tools that connect your business to suppliers and markets around the world. Air, ocean (FCL/LCL), and road freight, and multi-modal solutions to move your goods.</div>
-              <div data-aos="zoom-in" className='text-para-2'>We provide globally integrated end-to-end solutions tailored to our customers' supply chain management needs with a special commitment to industry specific requirements.</div>
+              <div data-aos="zoom-in" className='text-para-1'>{settings?.appName} Courier Company offers freight forwarding, contract logistics, and supply chain solutions that connect your business to suppliers and markets around the world. Air, ocean (FCL/LCL), and road freight, and multi-modal solutions are available to move your goods safely and efficiently across borders, ensuring timely delivery every step of the way.</div>
+              <div data-aos="zoom-in" className='text-para-2'>We provide globally integrated end-to-end solutions tailored to our customers' supply chain management needs, with a special commitment to industry-specific requirements. Our professional team ensures transparency, reliability, and seamless coordination from pickup to final delivery.</div>
             </div>
         </div>
           <div className='bage'>
@@ -141,7 +143,7 @@ const Home = () => {
                 <div className='heading'>{card.heading}</div>
                 <div className='text'>{card.text}</div>
 
-                <Link to='https://wa.me/2349021463046' target='_blank'><div className='action-button'>Get Quote</div></Link>
+                <Link to={'https://wa.link/l7mq9q'}><div className='action-button'>Get Quote</div></Link>
               </div>
             </div>
             ))}
@@ -285,8 +287,8 @@ const Home = () => {
               <div className='label'>Fulfillment On Time</div>
             </div>
             <div className='percentage-container' data-aos="fade-up">
-              <div className='number'>7</div>
-              <div className='label'>Warehouses Across The Country</div>
+              <div className='number'>17</div>
+              <div className='label'>Offices Across The Country</div>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from "react";
-import { RingLoader } from "react-spinners";
+import { BounceLoader } from "react-spinners";
 
 const SpinnerHome = () => {
     let [loading, setLoading] = useState(true);
@@ -8,10 +8,10 @@ const SpinnerHome = () => {
     return (
       <div className="sweet-loading">
   
-        <RingLoader
+        <BounceLoader
           color={color}
           loading={loading}
-          size={50}
+          size={80}
           aria-label="Loading Spinner"
           data-testid="loader"
         />

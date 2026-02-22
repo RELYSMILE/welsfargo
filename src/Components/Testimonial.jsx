@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { AppContext } from '../Context/Context'
 import { motion, AnimatePresence } from 'framer-motion'
 import person1 from '../assets/images/person-01.jpeg'
 import person2 from '../assets/images/person-02.jpeg'
@@ -7,38 +8,35 @@ import person4 from '../assets/images/person-04.jpeg'
 import './Testimonial.css'
 
 const Testimonial = () => {
+  const {settings} = useContext(AppContext)
   const testimonials = [
   {
     id: 0,
     name: 'Amanda J.',
-    quote:
-      'Hyper Forte Solution has been outstanding with their Rentals & Hires service. The equipment is always reliable, well-maintained, and delivered right on schedule. It has truly streamlined our projects.',
-    book: 'RENTALS & HIRES',
+    quote: `${settings?.appName} Courier has completely transformed the way we handle logistics. Their speed, reliability, and professionalism give us peace of mind knowing every shipment will arrive safely and on time.`,
+    book: 'FASHION RETAILER',
     image: person1,
   },
   {
     id: 1,
     name: 'Robert L.',
-    quote:
-      'With Hyper Forte Solution’s Transportation & Haulage, we’ve never had to worry about delays. Their fleet is efficient, and the team provides excellent updates every step of the way.',
-    book: 'TRANSPORTATION & HAULAGE',
+    quote: `The ${settings?.appName} team consistently goes above and beyond for our company. They provide quick updates, efficient solutions, and the best customer support we’ve ever experienced in the shipping industry.`,
+    book: 'TECHNOLOGY SUPPLIER',
     image: person3,
   },
   {
     id: 2,
     name: 'Nana M.',
-    quote:
-      'The Services Technology Tools from Hyper Forte Solution have transformed how we operate. Everything is user-friendly, innovative, and backed by a support team that truly cares about our success.',
-    book: 'SERVICES TECHNOLOGY TOOLS',
+    quote: `Working with ${settings?.appName} Courier has been a game changer for us. They understand the importance of deadlines and treat every delivery with care. We now consider them an essential partner in our operations.`,
+    book: 'HEALTHCARE SERVICES',
     image: person4,
   },
   {
     id: 3,
     name: 'Aadhya D.',
-    quote:
-      'Hyper Forte Solution’s Warehousing service is second to none. Secure, well-organized, and always accessible, it gives us confidence that our goods are in safe hands.',
-    book: 'WAREHOUSING',
-    image: person2, 
+    quote: `From day one, ${settings?.appName} Courier impressed us with their commitment to excellence. Their team is proactive, flexible, and always ensures our shipments run smoothly no matter the challenge.`,
+    book: 'E-COMMERCE BRAND',
+    image: person2, // make sure to add this new image import
   },
 ];
 

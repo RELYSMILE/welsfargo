@@ -1,0 +1,59 @@
+.ocean-freight{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #0f2027, #0297a1);
+
+        .main-container-fluid{
+        .parent-right-side-container{
+
+            .shipping-options-container{
+                .shipping-options{
+                    .info{
+                        margin-top: .5rem;
+                    }
+                }
+            }
+            .ocean-images{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 2rem;
+                margin: 2rem 0;
+                margin-bottom: 5rem;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+
+                img{
+                    height: 20rem;
+                    border-radius: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1222px){
+    .ocean-freight{
+        .main-container-fluid{
+            .parent-right-side-container{
+                .ocean-images{
+                    margin-bottom: 0;
+                    img{
+                        height: auto;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+

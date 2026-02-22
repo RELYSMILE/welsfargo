@@ -100,11 +100,14 @@
 @media(max-width: 650px){
 .testimonial-section-container{
     .label{
-
+        font-size: 2rem;
+        color: #e97e6a;
+        margin-top: 5rem;
     }
     .testimonial-section{
         right: 1%;
         left: 1%;
+        top: 4rem;
         padding-left: 1rem;
         padding-right: 1rem;
         .quote-author-image{

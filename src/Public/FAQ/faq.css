@@ -1,0 +1,131 @@
+.faq{
+    background: linear-gradient(135deg, #0f2027, #41113d, #1a2225, #013a6b, #fff);
+    .air-freight-hero-section{
+        height: 73vh;
+    }
+    .faq-fluid-container{
+        display: flex;
+        gap: 2rem;
+        padding: 2rem;
+        background: #fff;
+        padding-bottom: 5rem;
+
+        .faq-image{
+            position: relative;
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+            img{
+                height: 30rem;
+                border-radius: 1rem;
+            }
+        }
+        .faq-container{
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            box-shadow: 1px 1px 50px #dfdfdf;
+            padding: 0 2rem 2rem 2rem;
+            border-radius: 2rem;
+
+            .questions-container{
+                display: flex;
+                flex-direction: column;
+                margin-top: 2rem;
+                .questions{
+                    display: flex;
+                    justify-content: space-between;
+                    .question{
+                        width: 80%;
+                    }
+
+                    .question, .more{
+                        font-size: 16px;
+                        letter-spacing: 1.6;
+                        color: #808080;
+                        font-family: 'Gotham';
+                    }
+                    .more{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: #e97e6a;
+                        width: 1.3rem;
+                        height: 1.3rem;
+                        color: #fff;
+                        cursor: pointer;
+
+                    }
+                }
+                .answer{
+                    width: 80%;
+                    box-shadow: 1px 1px 10px #dfdfdf;
+                    margin-top: .5rem;
+                    padding: 1rem;
+                    color: #e97e6a;
+                    font-family: 'Gotham';
+                    letter-spacing: 1.6;
+                    font-size: 15px;
+                    border-radius: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px){
+    .faq{
+        .air-freight-hero-section{
+            height: 25vh;
+
+            h1{
+                font-size: 1.5rem;
+                margin-top: 4rem;
+                letter-spacing: 1.4px;
+            }
+        }
+        .faq-fluid-container{
+            flex-direction: column;
+            .faq-image{
+                img{
+                    height: auto;
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}
+@media (max-width: 768px){
+    .faq{
+        .air-freight-hero-section{
+            height: 25vh;
+
+            h1{
+                font-size: 1.5rem;
+                margin-top: 4rem;
+                letter-spacing: 1.4px;
+            }
+        }
+        .faq-fluid-container{
+            flex-direction: column;
+            padding: 2rem 1rem 5rem 1rem;
+
+            .faq-container{
+                padding: 0 1rem 1rem 1rem;
+
+                .questions-container{
+                    .answer{
+                        width: 93%;
+                    }
+                }
+            }
+        }
+    }
+}

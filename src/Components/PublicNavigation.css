@@ -28,7 +28,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2% .5rem 2%;
-    z-index: 1;
+    z-index: 11;
 
     .logo-container{
         display: flex;
@@ -38,16 +38,20 @@
         cursor: pointer;
 
         img{
-            width: 4rem;
-            height: 4rem;
-        }
-        .logo-alpha{
-            width: 9rem;
-            height: 2rem;
+            width: 10rem;
         }
         .name{
             font-size: 25px;
             color: #00e200;
+        }
+    }
+    .logo-container-window-scroll{
+        background: #e97e6a;
+        width: 8rem;
+        border-radius: 1rem;
+
+        img{
+            width: 8rem;
         }
     }
 
@@ -64,11 +68,14 @@
             align-items: center;
             justify-content: right;
             flex: 1;
-            gap: 2rem;
+            gap: 1.5rem;
             cursor: pointer;
 
             .nav-item{
-                color: #fff;
+                color: #d4d4d4;
+                &:hover{
+                    color: #fff;
+                }
             }
 
             .services{
@@ -86,10 +93,14 @@
                     }
                 }
                 .services-container{
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
                     position: fixed;
                     margin: .5rem 0 0 -2rem;
                     background: #fff;
-                    padding: 1rem 2rem;
+                    border: 1px solid #dfdfdf;
+                    padding: 2rem;
                     border-radius: .3rem;
 
                     .service{
@@ -97,15 +108,17 @@
                         align-items: center;
                         gap: 2.5rem;
                         margin-bottom: .8rem;
-                        color: #00000094;
+                        color: #284650;
+                        font-size: 16px;
+                        font-family: 'Gotham';
 
                         img{
-                            width: 1.5rem;
-                            height: 1.5rem;
+                            width: 1rem;
+                            height: 1rem;
                         }
 
                         &:hover{
-                            color: tomato;
+                            color: #e97e6a;
                             transition: .2s;
                         }
                     }
@@ -114,14 +127,14 @@
         }
         
         .active-nav-item{
-            border: 1px solid tomato;
+            border: 1px solid #e97e6a;
             color: #fff;
             padding: .12rem 1rem;
             border-radius: .2rem;
         }
 
         .tracking-button{
-            background: tomato;
+            background: #e97e6a;
             color: #fff;
             padding: .2rem 1rem;
             border-radius: .2rem;
@@ -136,7 +149,7 @@
             }
         }
         .tracking-button-window-scroll{
-            background: tomato;
+            background: #e97e6a;
             color: #fff;
             padding: .2rem 1rem;
             border-radius: .2rem;
@@ -144,9 +157,9 @@
             cursor: pointer;
             &:hover{
                 background: transparent;
-                border: 1px solid tomato;
+                border: 1px solid #e97e6a;
                 transition: .5s;
-                color: tomato;
+                color: #e97e6a;
             }
         }
     }
@@ -166,11 +179,14 @@
 
             .nav-item{
                 color: #1b1b1b;
+                &:hover{
+                    color: #e97e6a;
+                }
             }
         }
         .active-nav-item{
-            border: 1px solid tomato;
-            color: tomato;
+            border: 1px solid #e97e6a;
+            color: #e97e6a;
         }
 
     }
@@ -184,9 +200,10 @@
     .navigation-parent-container{
 
     .nav-items-container{
+        gap: .7rem;
         .nav-items{
             gap: 1rem;
-            font-size: 14px;
+            font-size: 13px;
         }
     }
 }
@@ -230,12 +247,8 @@
         .logo-container{
 
         img{
-            width: 2rem;
-            height: 2rem;
-        }
-        .logo-alpha{
-            width: 6rem;
-            height: 1rem;
+            width: 10rem;
+            height: 2.5rem;
         }
         .name{
             font-size: 25px;
@@ -260,7 +273,7 @@
     padding: .1rem .5rem;
     padding-top: .2rem;    
     border-radius: .2rem;
-    background: tomato;
+    background: #e97e6a;
 }
 
 .sm-nav-items-container{
@@ -273,6 +286,8 @@
     padding: 4%;
     background: #003368;
     animation: sm-nav 1s ease-in-out forwards;
+    overflow-y: scroll;
+    z-index: 1;
 
     .logo-close-button{
         display: flex;
@@ -284,13 +299,9 @@
             gap: .5rem;
 
             .logo{
-                width: 2.5rem;
+                width: 10rem;
                 height: 2.5rem;
             }
-        .logo-alpha{
-            width: 7rem;
-            height: 1.4rem;
-        }
         }
     }
 
@@ -302,55 +313,68 @@
         margin-top: 2rem;
         color: #fff;
         font-family: Arial, Helvetica, sans-serif;
-        
-        .nav-item{
-            cursor: pointer;
-
-            &:hover{
-                color: tomato;
+        Link{
+            .nav-item{
+                cursor: pointer;
+                color: #fff;
             }
+
         }
         .services-lable{
             display: flex;
             align-items: center;
             justify-content: center;
             gap: .5rem;
+            cursor: pointer;
 
             img{
                 width: 1.2rem;
             }
         }
-        .services-container{
-            display: flex;
-            flex-direction: column;
-            justify-content: left;
-            gap: 1rem;
-            background: #fff;
-            padding: 2rem;
-            border-radius: .5rem;
-            scale: 0;
-            animation: services 2s ease-in-out forwards;
-            margin-top: 1rem;
-
-            .service{
-                color: #000;
-                img{
-                    width: 1.2rem;
-                }
-
-                &:hover{
-                    color: tomato;
-                }
+        .nav-item-services{
+            width: 100%;
+            .services-container{
+                display: none;
             }
-            .service-x{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+
+            &:hover{
+                .services-container{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: left;
+                    gap: 1rem;
+                    background: #002b58;
+                    width: 80%;
+                    padding: 2rem;
+                    border-radius: .5rem;
+                    height: 0;
+                    overflow-y: hidden;
+                    animation: services .5s ease-in-out forwards;
+                    margin-top: 1rem;
+
+                    .service{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: #fff;
+                        padding: 1rem;
+                        border-radius: .5rem;
+                        border-bottom: 1px solid #003268;
+                        img{
+                            width: 1.2rem;
+                        }
+
+                        &:hover{
+                            color: #fff;
+                            background: #e97e6a;
+                        }
+                    }
+                }
             }
         }
     }
     .tracking-button{
-        background: tomato;
+        background: #e97e6a;
         text-align: center;
         color: #fff;
         padding: .3rem 0;
@@ -362,10 +386,12 @@
 
 @keyframes services {
     0%{
-        scale: 0;
+       height: 0;
+       overflow-y: hidden;
     }
     100%{
-        scale: 1;
+       height: fit-content;
+       overflow-y: hidden;
     }
 }
 @keyframes sm-nav {
